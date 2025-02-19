@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.gui.ResultsController">
+    <children>
+      <AnchorPane prefHeight="606.0" prefWidth="250.0">
+         <children>
+            <ImageView fitHeight="606.0" fitWidth="274.0">
+               <image>
+                  <Image url="@../images/gradient_bg.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="61.0" layoutX="21.0" layoutY="17.0">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="97.0" layoutY="14.0" text="Signed in as ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="userStatusLabel" layoutX="97.0" layoutY="39.0" text="USERNAME">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="candidatesLink" layoutX="41.0" layoutY="136.0" onAction="#onCandidates" text="CANDIDATES" textFill="#2e2a2a">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="voteLink" layoutX="46.0" layoutY="202.0" onAction="#onVote" text="VOTE" textFill="#2e2a2a">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="resultsLink" layoutX="43.0" layoutY="267.0" text="RESULTS" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="gainHoneyLink" layoutX="41.0" layoutY="412.0" onAction="#onGainHoney" text="GAIN HONEY" textFill="#2e2a2a">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="actualitiesLink" layoutX="43.0" layoutY="337.0" onAction="#onActualities" text="ACTUALITIES" textFill="#2e2a2a">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="signOutLink" layoutX="46.0" layoutY="487.0" onAction="#onSignOut" text="SIGN OUT" textFill="#2e2a2a">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="60.0" fitWidth="61.0" layoutX="327.0" layoutY="475.0">
+               <image>
+                  <Image url="@../images/bee_profile3.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nameLabel1" layoutX="334.0" layoutY="544.0" text="---" textAlignment="CENTER" />
+            <Label fx:id="votesLabel1" layoutX="334.0" layoutY="562.0" text="---" textAlignment="CENTER" />
+            <Label fx:id="nameLabel2" layoutX="418.0" layoutY="543.0" text="---" />
+            <Label fx:id="votesLabel2" layoutX="418.0" layoutY="561.0" text="---" />
+         </children>
+      </AnchorPane>
+        <Button fx:id="closeButton" layoutX="744.0" layoutY="7.0" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="50.0" style="-fx-background-color: ffb612;" text="✖" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Button>
+      <Label layoutX="316.0" layoutY="36.0" text="VOLBEE Results">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="418.0" layoutY="475.0">
+         <image>
+            <Image url="@../images/bee_profile1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="316.0" layoutY="82.0" text="Bellow you can see how the elections are evolving">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="homeButton" layoutX="687.0" layoutY="7.0" mnemonicParsing="false" onAction="#onHome" prefHeight="40.0" prefWidth="50.0" style="-fx-background-color: ffb612;" text="🏠" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="508.0" layoutY="475.0">
+         <image>
+            <Image url="@../images/bee_profile2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="598.0" layoutY="475.0">
+         <image>
+            <Image url="@../images/bee_profile6.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="687.0" layoutY="475.0">
+         <image>
+            <Image url="@../images/bee_profile4.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="nameLabel3" layoutX="507.0" layoutY="544.0" text="---" />
+      <Label fx:id="votesLabel3" layoutX="507.0" layoutY="562.0" text="---" />
+      <Label fx:id="nameLabel4" layoutX="599.0" layoutY="544.0" text="---" />
+      <Label fx:id="votesLabel4" layoutX="599.0" layoutY="562.0" text="---" />
+      <Label fx:id="nameLabel5" layoutX="687.0" layoutY="544.0" text="---" />
+      <Label fx:id="votesLabel5" layoutX="687.0" layoutY="562.0" text="---" />
+      <BarChart fx:id="votesBarChart" layoutX="290.0" layoutY="132.0" prefHeight="297.0" prefWidth="474.0">
+          
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+    </children>
+</AnchorPane>

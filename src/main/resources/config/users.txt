@@ -1,0 +1,8 @@
+Worker;user1;pass1;41
+Drone;user2;pass2;44
+Queen;user3;pass*;88
+Drone;user8;pass1;44
+Drone;emik;emuska;42
+Queen;tamara;123;78
+Worker;Bee1;cand;19
+Worker;Bee7;heslo;12

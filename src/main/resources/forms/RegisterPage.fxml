@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.gui.RegisterPageContoller">
+    <children>
+      <Button fx:id="closeButton" layoutX="739.0" layoutY="6.0" mnemonicParsing="false" onAction="#close" opacity="0.85" prefHeight="40.0" prefWidth="50.0" style="-fx-background-color: ffb612;" text="✖" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutY="-3.0" prefHeight="616.0" prefWidth="400.0">
+         <children>
+            <ImageView fitHeight="608.0" fitWidth="400.0">
+               <image>
+                  <Image url="@../images/gradient_bg.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="142.0" fitWidth="155.0" layoutX="122.0" layoutY="155.0">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="124.0" layoutY="316.0" text="WELCOME TO">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="351.0" text="VOLBEE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+          <Label layoutX="425.0" layoutY="77.0" prefHeight="93.0" prefWidth="380.0" text="VOLBEE 24">
+              <font>
+                  <Font name="System Bold" size="69.0" />
+              </font>
+              <effect>
+                  <Glow />
+              </effect>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9894737005233765" green="0.6761403679847717" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.42313954633489803">
+                     <color>
+                        <Color red="0.9800000190734863" green="0.8487529754638672" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.797560975609756">
+                     <color>
+                        <Color red="0.9800000190734863" green="0.44580885767936707" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.3499999940395355" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+          </Label>
+      <Label layoutX="425.0" layoutY="179.0" text="Register to continue">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="422.0" layoutY="212.0" text="Username">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="423.0" layoutY="278.0" text="Password">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordField" layoutX="423.0" layoutY="305.0" prefHeight="26.0" prefWidth="348.0" promptText="••••••••" />
+      <Button fx:id="registerButton" layoutX="423.0" layoutY="447.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="348.0" style="-fx-background-color: ffb612;" text="Register" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <TextField fx:id="usernameField" layoutX="423.0" layoutY="238.0" prefHeight="26.0" prefWidth="348.0" promptText="bee123" />
+      <Label layoutX="425.0" layoutY="346.0" text="Role">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBox" layoutX="423.0" layoutY="372.0" prefHeight="26.0" prefWidth="166.0" />
+      <Label layoutX="615.0" layoutY="346.0" text="Honey Produced">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="honeyField" layoutX="615.0" layoutY="372.0" prefHeight="26.0" prefWidth="155.0" promptText="34" />
+      <Label fx:id="warningLabel" layoutX="499.0" layoutY="511.0" text="Fill out every field before signing up!" textFill="#ffb612" />
+      <Label fx:id="existsLabel" layoutX="465.0" layoutY="511.0" text="This user already exists. Do you want to" />
+      <Hyperlink fx:id="loginLink" layoutX="674.0" layoutY="508.0" onAction="#onLoginButtonClicked" text="log in?" textFill="#ffb612" />
+    </children>
+</AnchorPane>
